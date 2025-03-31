@@ -38,9 +38,7 @@ public class Payment {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Menu loop: Keeps displaying the menu until the user chooses Exit
         while (true) {
-            // Hien thi menu va yeu cau nguoi dung chon phuong thuc thanh toan
             System.out.println("\nChon phuong thuc thanh toan");
             System.out.println("1. The tin dung");
             System.out.println("2. Paypal");
@@ -50,11 +48,10 @@ public class Payment {
 
             int choice = getValidChoice(scanner);
 
-            // Neu nguoi dung chon Exit (4), thoat khoi chuong trinh
             if (choice == 4) {
                 System.out.println("Thoat chuong trinh");
                 scanner.close();
-                return; // Dung chuong trinh
+                return; 
             }
 
             PaymentMethod selectedMethod = null;
